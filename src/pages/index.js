@@ -4,19 +4,31 @@ import screenImg from '../images/walkie-screen.jpg';
 import closerImg from '../images/closer-together.png';
 import distractionImg from '../images/distraction-free.png';
 import voiceImg from '../images/voice-only.png';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'; 
+import Features from './test';
 // import notFound from "404.js";
 
 class App extends Component {
+
+  handleBecomeFounderSubmit = e => {
+    e.preventdefault();
+    console.log("CLICKED")
+  }
+
   render() {
     return (
       <div className="App">
+        <Router>
         <NavBar />
-        <div class="flex py-8 bg-white mt-28 mx-auto space-y-2 xs:py-0 xs:flex-col xs:items-center xs:space-y-0">
+        <Switch>
+          <Route exact path="/features" render={() => <Features />} /> 
+        </Switch>
+        <div class="flex pt-8 bg-white mt-28 mx-auto space-y-2 xs:py-0 xs:flex-col xs:items-center xs:space-y-0">
         <div class="sm:order-10 w-1/2 text-left px-20">
             <h1 class="text-4xl py-5 font-extrabold tracking-wide leading-snug">Simple, real time voice chat for your remote team.</h1>
             <h3 class="text-xl">Walkie is a better way to communicate for distributed teams that don't want to spend all day in dry text channels.</h3>
-            <form class="my-10">
-              <input class="border border-r-0 rounded-l-lg py-3 border-gray-300" type="text" placeholder="   > work email"></input>
+            <form class="my-10" onSubmit={this.handleBecomeFounderSubmit}>
+              <input class="border border-r-0 rounded-l-lg py-3 border-gray-300" type="text" placeholder="   > work email" required></input>
               <button class="border border-black bg-black text-white px-3 py-3 font-bold rounded-r-lg">Become Founding User</button>
             </form>
           </div>
@@ -54,6 +66,7 @@ class App extends Component {
             <img src={process.env.PUBLIC_URL + '/images/request-access2.jpg'} />
           </div>
         </div>
+        </Router>
       </div>
     )
   }
