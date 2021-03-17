@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .bg-red-500 {
+  background-color: blue;
+}  */
+
+.my-10 {
+  margin-bottom: 1rem;
+}
+
+.kel {
+  background-color: red !important;
+}
+
+.noah {
+  background-color: green !important;
+}
+
