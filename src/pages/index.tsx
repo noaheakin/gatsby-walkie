@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
-import * as screenImg from '../images/walkie-screen.jpg';
+import screenImg from '../images/walkie-screen.jpg';
 import closerImg from '../images/closer-together.png';
 import distractionImg from '../images/distraction-free.png';
 import voiceImg from '../images/voice-only.png';
