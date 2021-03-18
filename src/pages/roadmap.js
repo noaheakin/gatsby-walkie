@@ -4,10 +4,11 @@ import NavBar from '../components/NavBar';
 
 const Roadmap = props => {
     return (
-        <div>
-            <NavBar />
-            <img src={roadmapImg} />
-        </div>
+        <>
+        </>
+        // <Layout>
+        //     <img src={roadmapImg} />
+        // </Layout>
     )
 }
 

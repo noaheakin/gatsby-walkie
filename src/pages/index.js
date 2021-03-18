@@ -6,9 +6,19 @@ import distractionImg from '../images/distraction-free.png';
 import voiceImg from '../images/voice-only.png';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'; 
 import Features from './test';
+import Roadmap from './roadmap';
 // import notFound from "404.js";
 
 class App extends Component {
+
+  state = {
+    shouldRerender: false
+  }
+
+  forceRender = () => {
+    console.log('Re-rendering');
+    this.setState({ shouldRerender: true });
+  }
 
   handleBecomeFounderSubmit = e => {
     e.preventdefault();
@@ -19,11 +29,16 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-        <NavBar />
+        <NavBar rerenderFunc={this.forceRender}/>
         <Switch>
-          <Route exact path="/features" render={() => <Features />} /> 
-        </Switch>
-        <div class="flex pt-8 bg-white mt-28 mx-auto space-y-2 xs:py-0 xs:flex-col xs:items-center xs:space-y-0">
+          {/* this route does not work when user manually inputs into browser url */}
+          <Route exact path="/features" render={Features} /> 
+          <Route exact path="/roadmap" render={Roadmap} /> 
+
+          {/* { window.location.pathname === '/features' && (
+            <div key={this.state.shouldRerender}>Render me</div>
+          )} */}
+        {/* <div class="flex pt-8 bg-white mt-28 mx-auto space-y-2 xs:py-0 xs:flex-col xs:items-center xs:space-y-0">
         <div class="sm:order-10 w-1/2 text-left px-20">
             <h1 class="text-4xl py-5 font-extrabold tracking-wide leading-snug">Simple, real time voice chat for your remote team.</h1>
             <h3 class="text-xl">Walkie is a better way to communicate for distributed teams that don't want to spend all day in dry text channels.</h3>
@@ -65,7 +80,8 @@ class App extends Component {
           <div>
             <img src={process.env.PUBLIC_URL + '/images/request-access2.jpg'} />
           </div>
-        </div>
+        </div> */}
+        </Switch>
         </Router>
       </div>
     )
