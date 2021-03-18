@@ -18,7 +18,12 @@ var closer_together_png_1 = require("../images/closer-together.png");
 var distraction_free_png_1 = require("../images/distraction-free.png");
 var voice_only_png_1 = require("../images/voice-only.png");
 var App = function () {
+    function randomNum(num) {
+        if (num === void 0) { num = (Math.floor(Math.random() * 11)); }
+        return num;
+    }
     return (jsx_runtime_1.jsxs("div", __assign({ className: "App" }, { children: [jsx_runtime_1.jsx(NavBar_1["default"], {}, void 0),
+            jsx_runtime_1.jsx("p", __assign({ className: "flex text-6xl justify-center" }, { children: randomNum() }), void 0),
             jsx_runtime_1.jsxs("div", __assign({ className: "flex pt-8 bg-white mt-28 mx-auto space-y-2 xs:py-0 xs:flex-col xs:items-center xs:space-y-0" }, { children: [jsx_runtime_1.jsxs("div", __assign({ className: "sm:order-10 w-1/2 text-left px-20" }, { children: [jsx_runtime_1.jsx("h1", __assign({ className: "text-4xl py-5 font-extrabold tracking-wide leading-snug" }, { children: "Simple, real time voice chat for your remote team." }), void 0),
                             jsx_runtime_1.jsx("h3", __assign({ className: "text-xl" }, { children: "Walkie is a better way to communicate for distributed teams that don't want to spend all day in dry text channels." }), void 0),
                             jsx_runtime_1.jsxs("form", __assign({ className: "my-10" }, { children: [jsx_runtime_1.jsx("input", { className: "border border-r-0 rounded-l-lg py-3 border-gray-300", type: "text", placeholder: "   > work email", required: true }, void 0),
