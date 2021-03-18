@@ -6,9 +6,15 @@ import distractionImg from '../images/distraction-free.png';
 import voiceImg from '../images/voice-only.png';
 
 const App = () => {
+
+  function randomNum(num: number = (Math.floor(Math.random() * 11))): number {
+    return num
+  }
+
   return (
     <div className="App">
       <NavBar />
+      <p className="flex text-6xl justify-center">{randomNum()}</p>
       <div className="flex pt-8 bg-white mt-28 mx-auto space-y-2 xs:py-0 xs:flex-col xs:items-center xs:space-y-0">
       <div className="sm:order-10 w-1/2 text-left px-20">
           <h1 className="text-4xl py-5 font-extrabold tracking-wide leading-snug">Simple, real time voice chat for your remote team.</h1>
