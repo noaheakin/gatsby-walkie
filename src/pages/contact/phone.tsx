@@ -4,9 +4,9 @@ import { Link } from 'gatsby';
 const Phone = () => {
     return(
         <div>
-            <p class="text-center text-4xl text-red-300 my-10">123-456-7890</p>
+            <p className="text-center text-4xl text-red-300 my-10">123-456-7890</p>
             <Link to='/'>
-                <button class="flex justify-center">Return Home</button>
+                <button className="flex justify-center">Return Home</button>
             </Link>
             
         </div>

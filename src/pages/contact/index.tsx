@@ -12,10 +12,10 @@ export default function Contact() {
     return (
         <div>
             <NavBar />
-            <div class="flex-col justify-center">
+            <div className="flex-col justify-center">
                 <p>Too busy! Try again later...</p>
                 <img src={contactImg} />
-                <div class="flex justify-around my-4">
+                <div className="flex justify-around my-4">
                     <Link to='/contact/phone'>
                         <button type="button">Call us</button>
                     </Link>
