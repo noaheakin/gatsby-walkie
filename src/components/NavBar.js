@@ -14,9 +14,6 @@ exports.__esModule = true;
 var jsx_runtime_1 = require("react/jsx-runtime");
 var gatsby_1 = require("gatsby");
 var walkie_logo_png_1 = require("../images/walkie-logo.png");
-var activeStyles = {
-    background: 'red'
-};
 var NavBar = function () {
     return (jsx_runtime_1.jsx("div", __assign({ className: "navbar" }, { children: jsx_runtime_1.jsxs("div", __assign({ className: "container h-8 flex flex-row mx-auto my-5" }, { children: [jsx_runtime_1.jsx(gatsby_1.Link, __assign({ to: "/" }, { children: jsx_runtime_1.jsx("img", { className: "h-8", src: walkie_logo_png_1["default"] }, void 0) }), void 0),
                 jsx_runtime_1.jsx("div", { className: "flex-grow" }, void 0),
