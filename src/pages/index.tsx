@@ -12,7 +12,7 @@ const App = () => {
   // }
 
   return (
-    <div className="App">
+    <div className="App bg-red-500">
       <NavBar />
       {/* <p className="flex text-6xl justify-center">{randomNum()}</p> */}
       <div className="flex pt-8 bg-white mt-28 mx-auto space-y-2 xs:py-0 xs:flex-col xs:items-center xs:space-y-0">
